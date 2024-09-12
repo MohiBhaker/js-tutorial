@@ -12,8 +12,56 @@ const userEmail = []
 // falsy values
 // false, 0, -0, BigInt 0n, "", null, undefined, NaN
 
+// console.log(false && "dog");
+// // ↪ false
+
+// console.log(0 && "dog");
+// // ↪ 0
+
+
 //truthy values
 // "0", 'false', " ", [], {}, function(){}
+
+// if (true)
+//     if ({})
+//     if ([])
+//     if (42)
+//     if ("0")
+//     if ("false")
+//     if (new Date())
+//     if (-42)
+//     if (12n)
+//     if (3.14)
+//     if (-3.14)
+//     if (Infinity)
+//     if (-Infinity)
+
+// If the first operand is truthy, the logical AND operator returns the second operand:
+// true && "dog"
+// // returns "dog"
+
+// [] && "dog"
+// // returns "dog"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
 // if we have to check array is empty or not.

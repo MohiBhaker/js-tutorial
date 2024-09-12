@@ -42,4 +42,4 @@ const shoppingCart = [
 
 const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
 
-console.log(priceToPay);                 // 22996
+console.log(priceToPay);                                                     // 22996
