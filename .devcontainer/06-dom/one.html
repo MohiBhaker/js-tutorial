@@ -29,3 +29,83 @@
     </div>
 </body>
 </html>
+
+
+
+
+<!-- 
+// 1. 
+// get values
+document.getElementById('firstHeading')
+<h1 id=​"firstHeading" class=​"firstHeading mw-first-heading">​…​</h1>​<span class=​"mw-page-title-main">​SWIFT​</span>​</h1>​
+
+document.getElementById('firstHeading').id
+'firstHeading'
+
+document.getElementById('firstHeading').className
+'firstHeading mw-first-heading'
+
+document.getElementById('firstHeading').getAttribute('id')
+'firstHeading'
+
+// set values
+document.getElementById('firstHeading').setAttribute('class', 'test')
+overwrite the current class
+
+document.getElementById('firstHeading').setAttribute('class', 'test firstHeading')
+
+
+// style anything
+document.getElementById('firstHeading').style.color = 'red'
+'red'
+
+// innerText always show the visible text
+classH.innerText
+'SWIFT'
+
+
+// textContent always show the visible & hidden element lile something display none;
+classH.textContent
+'SWIFT'
+
+// innerHTML shows all full element with HTML also like span in heading
+classH.innerHTML
+'<span class="mw-page-title-main">SWIFT</span>'
+
+
+// getElementByClassName
+document.getElementsByClassName('test')
+HTMLCollection [h1#firstHeading.test, firstHeading: h1#firstHeading.test]
+...
+
+// querySelector :-  Selects the first element with matched condition
+document.querySelector('input[type="search"]').style.backgroundColor = 'red'
+
+// querySelector :-  Selects the all element with matched condition but if we want display we have to specify which one we want
+document.querySelectorAll('input')
+NodeList(44) []
+
+// forEach Available by default
+
+inputV = document.querySelectorAll('input')
+
+inputV[2]
+<input type=​"hidden" name=​"title" value=​"Special:​Search">​
+
+inputV.forEach(function (li) {
+    li.style.backgroundColor = 'yellow'
+})
+
+
+
+// to perform array operation with HTMLCollection or NodeList which not supported we have to convert them into array
+// headings is a variable of HTMLCollection
+Array.from(headings)
+
+Then we can use
+
+
+
+
+
+-->

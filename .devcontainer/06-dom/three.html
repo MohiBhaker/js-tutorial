@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul class="ul" id="ul">
+<li class="list-item">C++</li>
+
+</ul>
+
+<div class="new-ul" id="new-ul"></div>
+
+<script>
+
+function addLanguage(lname) {
+	const li = document.createElement('li');
+    
+    li.innerHTML = `${lname}`;
+    
+    let ul = document.querySelector('#ul');
+    
+    ul.appendChild(li);
+
+}
+addLanguage('ruby') ;
+addLanguage('java') ;
+
+function optiLanguage(lname) {
+	const li = document.createElement('li');
+	const addText = document.createTextNode(lname);
+    
+    li.appendChild(addText);
+    
+       let ul = document.querySelector('#ul').appendChild(li);
+    
+}
+
+optiLanguage('PHP')
+
+
+
+// edit
+
+const secondLanguage = document.querySelector('li:nth-child(2)');
+// 1
+// secondLanguage.innerHTML = "MOJO"
+
+// 2
+const newli = document.createElement('li')
+newli.textContent = "UI UX";
+
+secondLanguage.replaceWith(newli);
+
+// 3. 
+const firstLanguage = document.querySelector('li:first-child');
+firstLanguage.outerHTML = '<a href="">Python</a>';
+
+// remove
+const lastLanguage = document.querySelector('li:last-child');
+lastLanguage.remove()
+
+
+
+
+</script>
+
+
+</body>
+</html> 
