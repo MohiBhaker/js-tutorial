@@ -218,7 +218,7 @@ setInterval(function () {
 ```
 
 
-## project 4
+## project 4 : Number Guessing Game
 ```html
 <!DOCTYPE html>
 <html lang="en">
