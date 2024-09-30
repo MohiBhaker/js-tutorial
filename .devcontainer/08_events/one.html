@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>htnml Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <!-- <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" onclick="alert('owl')"></li> -->
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      Focus this iframe and press any key to get the current timestamp for the
+      keypress event.
+    </p>
+    <p>timeStamp: <span id="time">-</span></p>
+  </body>
+  <script>
+    // document.getElementById('owl').onclick = function () {
+    //   alert('owl clicked');
+    // };
+
+    // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // //1 e.type
+    // document.getElementById('images').addEventListener(
+    //   'click',
+    //   function (e) {
+    //     console.log(e.type);
+    //   },
+    //   false
+    // );
+
+    // //2 e.timestamp
+    // function getTime(event) {
+    //   const time = document.getElementById('time');
+    //   time.firstChild.nodeValue = event.timeStamp;
+    // }
+    // document.body.addEventListener('keypress', getTime);
+
+    //3    e.stopPropagation();
+    // document.getElementById('images').addEventListener(
+    //   'click',
+    //   function (e) {
+    //     console.log('ul clicked');
+    //   },
+    //   false
+    // );
+    // document.getElementById('owl').addEventListener(
+    //   'click',
+    //   function (e) {
+    //     console.log('owl clicked');
+    //     e.stopPropagation();
+    //   },
+    //   false
+    // );
+
+    //4 e.defaultPrevented
+    //   The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+    // For example, this can be useful when:
+    // Clicking on a "Submit" button, prevent it from submitting a form
+    // Clicking on a link, prevent the link from following the URL
+    // Note: Not all events are cancelable. Use the cancelable property to find out if an event is cancelable.
+
+    // document.getElementById('google').addEventListener(
+    //   'click',
+    //   function (e) {
+    //     e.preventDefault();
+    //     // e.stopPropagation();
+    //     console.log('google clicked');
+    //   },
+    //   false
+    // );
+
+    //5. e.target
+
+    // document.querySelector('#images').addEventListener('click', function (e) {
+    //   console.log(e.target.id);
+    //   if (e.target.tagName === 'IMG') {
+    //     console.log(e.target.id);
+    //     let removeIt = e.target.parentNode;
+    //     removeIt.remove();
+    //   }
+    // });
+    // e.target.attributes, e.target.innerHTML, e.target.nodeType, e.target.tagName
+
+    // 6. e.CurrentTarget
+    //  The currentTarget property returns the element whose event listener triggered the event.
+
+    // removeIt.parentNode.removeChild(removeIt);
+
+    //.7 The getModifierState() method returns true if the specified modifier key was pressed, or activated.
+    // Modifier keys that are activated only when they are being pressed down:
+    // Alt
+    // AltGraph
+    // Control
+    // Meta
+    // Shift
+    // Modifier keys that are activated when they are clicked, and deactivated when they are clicked again:
+    // CapsLock
+    // NumLock
+    // ScrollLock
+
+    // 8. event.stopImmediatePropagation();
+    // The stopImmediatePropagation() method prevents other listeners of the same event from being called.
+    // https://www.w3schools.com/jsrEF/event_stopimmediatepropagation.asp
+
+    // 10.  // e.clientX , e.clientY
+    //  The clientX property returns the horizontal client coordinate of the mouse pointer when a mouse event occurs.
+    //  The clientY property returns the vertical client coordinate of the mouse pointer when a mouse event occurs.
+    // document.querySelector('#images').addEventListener('click', function (e) {
+    //   console.log(e.clientX);
+    //   console.log(e.clientY);
+    // });
+
+    // Property	                Relative to
+    // The screenX Property	    The Screen area
+    // The screenY Property	    The Screen area
+    // The clientX Property	    The Window area
+    // The clientY Property	    The Window area
+    // The pageX Property	      The Page (Document)
+    // The pageY Property	      The Page (Document)
+    // The offsetX Property	    The target Element
+    // The offsetY Property	    The target Element
+    
+    // 11. event.deltaX,  event.deltaY
+    //  The deltaX property returns a positive value when scrolling to the right, and a negative value when scrolling to the left, otherwise 0.
+    //  The deltaY property returns a positive value when scrolling to the scrolling down, and a negative value when scrolling up, otherwise 0.
+    // The deltaZ property returns a positive value when scrolling in, and a negative value when scrolling out, otherwise 0.
+
+    // 12. e.elapsedTime
+    //  The elapsedTime property returns the number of seconds the animation has been running, when an animation event occurs.
+
+    // 13. The persisted property returns a Boolean value that indicates if the webpage is loaded directly from the server, or if the page is cached, when an onpageshow or onpagehide event occurs.
+    
+    //14.  event.button
+    // The button property returns which mouse button is pressed when a mouse event occurs.
+
+
+    
+    </script>
+</html>
