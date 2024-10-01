@@ -363,7 +363,7 @@ function newGame() {
 
 ```
 
-## project 5 : Number Guessing Game
+## project 5 : Keyboard
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -438,7 +438,7 @@ window.addEventListener('keydown', (e) => {
 
 ```
 
-## project 6 : Number Guessing Game
+## project 6 : Unlimmted colors
 
 ```html
 <!DOCTYPE html>
